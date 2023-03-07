@@ -1,0 +1,62 @@
+:root {
+    --template-menu: hsla(60, 2%, 36%, 0.2);
+    --cor-font-dark-mode: rgb(242, 227, 227);
+    --font-padrao:'Play', sans-serif;
+    --cor-font-lightning: rgb(50, 50, 50);
+    --hover-menu-color: rgb(48, 66, 47);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+    background: none;
+}
+
+.dark-mode {
+    background-color: rgb(24, 0, 34);
+    color: var(--cor-font-dark-mode);
+}
+
+.lightning {
+    background-color: whitesmoke;
+    color: var(--cor-font-lightning);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    height: 10vh;
+    background-color: var(--template-menu);
+}
+
+.logo {
+    width: 20%;
+    line-height: 10vh;
+}
+.menu {
+   width: 25%;
+   line-height: 10vh;
+}
+
+.menu-lista {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-menu:hover {
+    color: var(--hover-menu-color);
+}
+
