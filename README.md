@@ -6,6 +6,7 @@
 - Gabriel Paixão Rodrigues da Silva - RA:3022201075
 - Guilherme Martins Cavalcanti - RA: 3022200858
 - Hélder José Cândido - RA: 3022200685
+- Henrique Artuzzi França - RA: 3022201154
 - Henrique Santana de Brito - RA: 3022201251
 - Kayo Araujo Oliveira - RA: 3022200176
 - Lucas Rodrigues Seidel Silva - RA:3022200383
