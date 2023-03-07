@@ -1,4 +1,6 @@
 # Projeto do 2º Semestre do curso de Tecnologia em Análise e Desenvolvimento de Sistemas!
+> Status do Projeto:
+> + Em Andamento ⏯️
 ## Integrantes
 - André Passero Olímpio de Souza - RA: 3022201601
 - Emanuel Anderson da Silva - RA: 3021103819
