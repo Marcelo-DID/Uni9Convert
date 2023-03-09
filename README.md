@@ -18,4 +18,18 @@
 ## Objetivo
 - O objetivo deste projeto, é a construção de um serviço WEB.
 
-##
+## Tópicos à definir!
+
+> + Tipo do serviço oferecido **(objetivo)**
+> + Banco de dados Escolhido
+> + Divisão de tarefas
+> + Tempo de revisão em call
+> + Frameworks
+
+## Já Definidos!
+
+> + Linguagens: **JavaScript, HTML, CSS, NodeJS**
+
+## Acréscimo:
+
+> + Pré-treinamento em Versionamento **(Irá precisar de um voluntário)**.
