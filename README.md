@@ -2,17 +2,17 @@
 > Status do Projeto:
 > + Em Andamento ⏯️
 ## Integrantes
-- André Passero Olímpio de Souza - RA: 3022201601
+- André Passero Olímpio de Souza - RA: 3022201601 - HTML/CSS
 - Emanuel Anderson da Silva - RA: 3021103819
-- Gabriel Miguel Dias - RA: 3022200368
-- Gabriel Paixão Rodrigues da Silva - RA:3022201075
-- Guilherme Martins Cavalcanti - RA: 3022200858
-- Hélder José Cândido - RA: 3022200685
+- Gabriel Miguel Dias - RA: 3022200368 - HTML/CSS
+- Gabriel Paixão Rodrigues da Silva - RA:3022201075 - HTML/CSS
+- Guilherme Martins Cavalcanti - RA: 3022200858 - HTML/CSS
+- Hélder José Cândido - RA: 3022200685 - HTML/CSS
 - Henrique Artuzzi França - RA: 3022201154
-- Henrique Santana de Brito - RA: 3022201251
+- Henrique Santana de Brito - RA: 3022201251 - JavaScript
 - Kayo Araujo Oliveira - RA: 3022200176
-- Lucas Rodrigues Seidel Silva - RA:3022200383
-- Marcelo Gomes de Abreu Oliveira - RA: 3022107357
+- Lucas Rodrigues Seidel Silva - RA:3022200383 - JavaScript
+- Marcelo Gomes de Abreu Oliveira - RA: 3022107357 - JavaScript
 - Matheus Souza Martins - RA: 3022200274
 
 ## Objetivo
