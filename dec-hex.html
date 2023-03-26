@@ -9,15 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Play:wght@700&display=swap" rel="stylesheet">
-    <script src="./js/conversorDecimalBinOct.js" defer></script>
+    <script src="./js/conversorDecHex.js" defer></script>
     <title>Página Inicial</title>
 </head>
 <body>
     <header>
         <!-- background -->
     <nav>
+        <a href="./index.html">Voltar!!</a>
         <!-- Menu Navegação -->
-        <a href="./dec-hex.html">Hexa -> Dec</a>
     </nav>
     </header>
     <aside>
@@ -26,32 +26,33 @@
     <main>
         <section class="secaoPrincipal"> <!-- Seção Principal - Navegação e Formulários-->
             <!-- Divisão de navegação-->
+
             <div>
                 <nav class="menu">
-                    <button class="botao bin">
-                        Binário | BIN
+                    <button class="botao dec-hexa">
+                        Dec | Hexa
                     </button>
-                    <button class="botao octal">
-                        Octal | OCT
+                    <button class="botao hexa-dec">
+                        Hexa | Dec
                     </button>
                 </nav>
             </div>
             <div class="conversores"> <!-- Seção de Formulários-->
                 <form class="form">
-                    <div class="binForm active">
-                        <label class="labelConversor" for="binary">Conversão para Binário!</label>
-                        <input class="inputConversor" type="number" id="binary" placeholder="Decimal para Binário!">
+                    <div class="decHexaForm active">
+                        <label class="labelConversor" for="dec-hexa">Conversão para Hexadecimal</label>
+                        <input class="inputConversor" type="number" id="dec-hexa" placeholder="Decimal para Hexadecimal!">
                     </div>
-                    <div class="octalForm">
-                        <label class="labelConversor" for="oct">Conversão para Octal!</label>
-                        <input class="inputConversor" type="number" id="oct" placeholder="Decimal para Octal!">
+                    <div class="hexaDecForm">
+                        <label class="labelConversor" for="hexa-dec">Conversão para Decimal!</label>
+                        <input class="inputConversor" type="number" id="hexa-dec" placeholder="Hexadecimal para Decimal!">
                     </div>
                     <div class="formButton">
                         <button class="botao converte">Converter!!</button>
                     </div>
                     <div class="resultForm">
                         <label class="labelConversor" for="result">Resultado!</label>
-                        <input class="inputConversor" type="number" id="result" placeholder="Resultado" readonly>
+                        <input class="inputConversor" type="text" id="result" placeholder="Resultado" readonly>
                     </div>
                 </form>
             </div>

@@ -1,34 +1,34 @@
-//const botaoBin = document.querySelector('.bin');
-//const botaoOct = document.querySelector('.octal');
-//const form = document.querySelector('.form');
-//const formBin = document.querySelector('.binForm');
-//const formOct = document.querySelector('.octalForm');
-//const inputBin = document.querySelector('#binary');
-//const inputOct = document.querySelector('#oct');
-//const inputRes = document.querySelector('#result');
-//const botaoConvert = document.querySelector('.converte');
+const botaoBin = document.querySelector('.bin');
+const botaoOct = document.querySelector('.octal');
+const form = document.querySelector('.form');
+const formBin = document.querySelector('.binForm');
+const formOct = document.querySelector('.octalForm');
+const inputBin = document.querySelector('#binary');
+const inputOct = document.querySelector('#oct');
+const inputRes = document.querySelector('#result');
+const botaoConvert = document.querySelector('.converte');
 
-// const clickBotaoBin = botaoBin.addEventListener('click', () => {
-//     return apresentaForm(formBin, formOct);
-// });
+const clickBotaoBin = botaoBin.addEventListener('click', () => {
+    return apresentaForm(formBin, formOct);
+});
 
-// const clickBotaoOct = botaoOct.addEventListener('click', () => {
-//     return apresentaForm(formOct, formBin);
-// });
+const clickBotaoOct = botaoOct.addEventListener('click', () => {
+    return apresentaForm(formOct, formBin);
+});
 
-// const clickResult = botaoConvert.addEventListener('click', mostraResult);
+const clickResult = botaoConvert.addEventListener('click', mostraResult);
 
-// //Apresenta o formulário de acordo com o botão selecionado (binario ou octal)
-// function apresentaForm(add, rem) {
-//     limpaForms(inputBin, inputOct, inputRes);
-//     add.classList.add('active')
-//     rem.classList.remove('active')
-// }
+//Apresenta o formulário de acordo com o botão selecionado (binario ou octal)
+function apresentaForm(add, rem) {
+    limpaForms(inputBin, inputOct, inputRes);
+    add.classList.add('active')
+    rem.classList.remove('active')
+}
 
-// function mostraResult(resultado) {
-//     inputRes.value = converteDecimal(resultado);
-//     return inputRes;
-// }
+function mostraResult(resultado) {
+    inputRes.value = converteDecimal(resultado);
+    return inputRes;
+}
 
 function converteDecimal(event, decimal, conversor) {
     event.preventDefault();//Previne as funções padrões do botão.... Atualizar a página
@@ -58,12 +58,12 @@ function converteDecimal(event, decimal, conversor) {
     return res.toString().replace(/,/g, ''); //retorna o resultado transformando em string e retira as virgulas
 }
 
-// function limpaForms(bin, oct, res) {
-//     if(formBin.classList.contains('active') || formOct.classList.contains('active')) {
-//         bin.value = '';
-//         oct.value = '';
-//         res.value = '';
-//     }
-// }
+function limpaForms(bin, oct, res) {
+    if(formBin.classList.contains('active') || formOct.classList.contains('active')) {
+        bin.value = '';
+        oct.value = '';
+        res.value = '';
+    }
+}
 
 

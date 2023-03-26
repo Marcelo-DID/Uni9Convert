@@ -1,53 +1,44 @@
-//const botaoBin = document.querySelector('.bin');
-//const botaoOct = document.querySelector('.octal');
-//const form = document.querySelector('.form');
-//const formBin = document.querySelector('.binForm');
-//const formOct = document.querySelector('.octalForm');
-//const inputBin = document.querySelector('#binary');
-//const inputOct = document.querySelector('#oct');
-//const inputRes = document.querySelector('#result');
-//const botaoConvert = document.querySelector('.converte');
+const botaoDecHexa = document.querySelector('.dec-hexa');
+const botaoHexaDec = document.querySelector('.hexa-dec');
+const form = document.querySelector('.form');
+const formDecHexa = document.querySelector('.decHexaForm');
+const formHexaDec = document.querySelector('.hexaDecForm');
+const inputDecHex = document.querySelector('#dec-hexa');
+const inputHexaDec = document.querySelector('#hexa-dec');
+const inputRes = document.querySelector('#result');
+const botaoConvert = document.querySelector('.converte');
 
-// const clickBotaoBin = botaoBin.addEventListener('click', () => {
-//     return apresentaForm(formBin, formOct);
-// });
+const clickBotaoHexa = botaoDecHexa.addEventListener('click', () => {
+     return apresentaForm(formDecHexa, formHexaDec);
+});
 
-// const clickBotaoOct = botaoOct.addEventListener('click', () => {
-//     return apresentaForm(formOct, formBin);
-// });
+const clickBotaoDec = botaoHexaDec.addEventListener('click', () => {
+     return apresentaForm(formHexaDec, formDecHexa);
+});
 
-// const clickResult = botaoConvert.addEventListener('click', mostraResult);
+const clickResult = botaoConvert.addEventListener('click', mostraResult);
 
-// //Apresenta o formulário de acordo com o botão selecionado (binario ou octal)
-// function apresentaForm(add, rem) {
-//     limpaForms(inputBin, inputOct, inputRes);
-//     add.classList.add('active')
-//     rem.classList.remove('active')
-// }
+//Apresenta o formulário de acordo com o botão selecionado (binario ou octal)
+function apresentaForm(add, rem) {
+    limpaForms(inputDecHex, inputHexaDec, inputRes);
+    add.classList.add('active')
+    rem.classList.remove('active')
+}
 
-// function mostraResult(resultado) {
-//     inputRes.value = converteDecimal(resultado);
-//     return inputRes;
-// }
+function mostraResult(resultado) {
+    inputRes.value = converteDecimal(resultado);
+    return inputRes.toString();
+}
 
-let formBin = true;
-let formOct = false;
-let inputDec = 2222;
-let inputOct = 2422;
-
-function converteDecimal(event, decimal) {
-    //event.preventDefault();//Previne as funções padrões do botão.... Atualizar a página
+function converteDecimal(event, decimal, conversor) {
+    event.preventDefault();//Previne as funções padrões do botão.... Atualizar a página
     let res = '';
     let quo = '';
-    let conversor = '';
-    //if(formBin.classList.contains('active')) {
-    if(formBin) {
+    if(formDecHexa.classList.contains('active')){
         conversor = 16;
-        decimal = inputDec;
-    //} else if (formOct.classList.contains('active')) {
-    } else if (formOct) {
-        conversor = 8;
-        decimal = inputOct;
+        decimal = inputDecHex.value;
+    } else if (formHexaDec.classList.contains('active')) {
+        return;
     }
     //loop para retornar o valor em binario ou octal ... retornará o valor ao contrário.
     while((~~decimal/conversor) !== 0) {
@@ -76,7 +67,7 @@ function converteDecimal(event, decimal) {
             default:
                 res += (decimal % conversor);
         }
-        
+            
         console.log(`resultado = ${res}`);
         decimal = ~~(decimal/conversor); //decimal a ser divido pelo conversor no proximo loop do while... Obs.: sem essa linha o codigo se torna infinito!!
         console.log(`decimal = ${decimal} - Finalizado nessa linha`);
@@ -88,16 +79,13 @@ function converteDecimal(event, decimal) {
     return res.toString().replace(/,/g, ''); //retorna o resultado transformando em string e retira as virgulas
 }
 
-console.log(converteDecimal());
 
-
-
-// function limpaForms(bin, oct, res) {
-//     if(formBin.classList.contains('active') || formOct.classList.contains('active')) {
-//         bin.value = '';
-//         oct.value = '';
-//         res.value = '';
-//     }
-// }
+function limpaForms(dec, hex, res) {
+    if(formDecHexa.classList.contains('active') || formHexaDec.classList.contains('active')) {
+        dec.value = '';
+        hex.value = '';
+        res.value = '';
+    }
+}
 
 

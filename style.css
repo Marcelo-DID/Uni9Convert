@@ -14,49 +14,22 @@
     background: none;
 }
 
-.dark-mode {
-    background-color: rgb(0, 24, 27);
-    color: var(--cor-font-dark-mode);
+.binForm {
+    display: none;
 }
 
-.lightning {
-    background-color: whitesmoke;
-    color: var(--cor-font-lightning);
+.octalForm {
+    display: none;
 }
 
-.cabecalho {
+.decHexaForm {
+    display: none;
+}
+
+.hexaDecForm {
+    display: none;
+}
+
+.active {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    height: 10vh;
-    background-color: var(--template-menu);
 }
-
-.logo {
-    width: 20%;
-    line-height: 10vh;
-}
-.menu {
-   width: 25%;
-   line-height: 10vh;
-}
-
-.menu-lista {
-    background: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-}
-
-.link-menu {
-    text-decoration: none;
-    color: inherit;
-}
-
-.link-menu:hover {
-    color: var(--hover-menu-color);
-}
-
