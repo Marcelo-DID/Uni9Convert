@@ -14,19 +14,7 @@
     background: none;
 }
 
-.binForm {
-    display: none;
-}
-
-.octalForm {
-    display: none;
-}
-
-.decHexaForm {
-    display: none;
-}
-
-.hexaDecForm {
+.binForm, .octalForm, .decHexaForm, .hexaDecForm, .binHexaForm, .hexaBinForm {
     display: none;
 }
 

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Play:wght@700&display=swap" rel="stylesheet">
-    <script src="./js/conversorDecHex.js" defer></script>
+    <script src="./js/converteBinHex.js" defer></script>
     <title>Página Inicial</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
         <!-- background -->
     <nav>
         <a href="./index.html">Voltar!!</a>
-        <a href="./bin-hex.html">Bin => Hexa!!</a>
+        <a href="./dec-hex.html">Dec => Hexa!!</a>
         <!-- Menu Navegação -->
     </nav>
     </header>
@@ -30,23 +30,23 @@
 
             <div>
                 <nav class="menu">
-                    <button class="botao dec-hexa">
-                        Dec | Hexa
+                    <button class="botao bin-hexa">
+                        Bin | Hexa
                     </button>
-                    <button class="botao hexa-dec">
-                        Hexa | Dec
+                    <button class="botao hexa-bin">
+                        Hexa | Bin
                     </button>
                 </nav>
             </div>
             <div class="conversores"> <!-- Seção de Formulários-->
                 <form class="form">
-                    <div class="decHexaForm active">
-                        <label class="labelConversor" for="dec-hexa">Conversão para Hexadecimal</label>
-                        <input class="inputConversor" type="number" id="dec-hexa" placeholder="Decimal para Hexadecimal!">
+                    <div class="binHexaForm active">
+                        <label class="labelConversor" for="bin-hexa">Conversão para Hexadecimal</label>
+                        <input class="inputConversor" type="number" id="bin-hexa" placeholder="Binário para Hexadecimal!">
                     </div>
-                    <div class="hexaDecForm">
-                        <label class="labelConversor" for="hexa-dec">Conversão para Decimal!</label>
-                        <input class="inputConversor" type="text" id="hexa-dec" placeholder="Hexadecimal para Decimal!">
+                    <div class="hexaBinForm">
+                        <label class="labelConversor" for="hexa-bin">Conversão para Binário!</label>
+                        <input class="inputConversor" type="text" id="hexa-bin" placeholder="Hexadecimal para Binário!">
                     </div>
                     <div class="formButton">
                         <button class="botao converte">Converter!!</button>

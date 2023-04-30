@@ -8,15 +8,18 @@ const inputOct = document.querySelector('#oct');
 const inputRes = document.querySelector('#result');
 const botaoConvert = document.querySelector('.converte');
 
-const clickBotaoBin = botaoBin.addEventListener('click', () => {
-    return apresentaForm(formBin, formOct);
-});
+const clickBotaoBin = clickBotao(botaoBin, formBin, formOct);
 
-const clickBotaoOct = botaoOct.addEventListener('click', () => {
-    return apresentaForm(formOct, formBin);
-});
+const clickBotaoOct = clickBotao(botaoOct, formOct, formBin);
 
 const clickResult = botaoConvert.addEventListener('click', mostraResult);
+
+
+function clickBotao(botao, formOn, formOff) {
+    botao.addEventListener('click', () => {
+        return apresentaForm(formOn, formOff);
+    })
+}
 
 //Apresenta o formulário de acordo com o botão selecionado (binario ou octal)
 function apresentaForm(add, rem) {

@@ -9,15 +9,18 @@ const inputRes = document.querySelector('#result');
 const botaoConvert = document.querySelector('.converte');
 let mensagem = document.querySelector('[data-mensagem]');
 
-const clickBotaoHexa = botaoDecHexa.addEventListener('click', () => {
-     return apresentaForm(formDecHexa, formHexaDec);
-});
+const clickBotaoHexa = clickBotao(botaoDecHexa, formDecHexa, formHexaDec);
 
-const clickBotaoDec = botaoHexaDec.addEventListener('click', () => {
-     return apresentaForm(formHexaDec, formDecHexa);
-});
+const clickBotaoDec = clickBotao(botaoHexaDec, formHexaDec, formDecHexa);
 
 const clickResult = botaoConvert.addEventListener('click', mostraResult);
+
+
+function clickBotao(botao, formOn, formOff) {
+    botao.addEventListener('click', () => {
+        return apresentaForm(formOn, formOff);
+    })
+}
 
 //Apresenta o formulário de acordo com o botão selecionado (binario ou octal)
 function apresentaForm(add, rem) {
@@ -109,6 +112,24 @@ function converteLetraHex(inputUsuario) {
                 iterador.push(14);
                 break;
             case 'F':
+                iterador.push(15);
+                break;
+            case 'a':
+                iterador.push(10);
+                break;
+            case 'b':
+                iterador.push(11);
+                break;
+            case 'c':
+                iterador.push(12);
+                break;
+            case 'd':
+                iterador.push(13);
+                break;
+            case 'e':
+                iterador.push(14);
+                break;
+            case 'f':
                 iterador.push(15);
                 break;
             default:
