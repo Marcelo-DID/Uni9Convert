@@ -1,0 +1,146 @@
+
+<!-- **Creating the front end part of the converter tool*
+
+ Program: Uni9convert (index.html)
+  Gabriel Paixão R. Silva
+ date: 01/05/2023
+ version: 1.0 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uni9Convert</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img\Png\favicon.ico" />
+	
+</head>
+
+<body>
+	
+
+	<section id="Home">
+		<header>
+			<div class="center menu-container">
+				<div class="logo">
+					<img src="img\Png\LogoWE.png">
+				</div>
+				<nav class="menu">
+					<a class="active-menu" href="#" reload() >Home</a>
+				</nav>
+			</div>
+
+		</header>
+		<header id="intro">
+			<script src="js/prensentation.js"></script>
+
+			<div>
+				<aside>
+					<div> The best place to convert your numbers!	</div> 
+				</aside>
+
+				<aside>
+					<div id="disp"> </div> 
+				</aside>
+
+			</div>
+
+			<figure><img src="img/Png/Uni9convert 2022 ® Todos os Direitos Reservados.png" alt=""></figure>
+
+		</header>
+
+
+		<video class="hero"  autoplay="1" loop="1" muted="1">
+			<source src="vid/backgronud_digital.mp4" type="video/mp4" />
+		</video>
+
+
+	</section>
+
+	<section>
+		<div class="login-box">
+			<form>
+
+				<div class="radio-inputs">
+				
+					<label class="radio">
+						<input type="radio" name="radioin" id="bin_in" onclick="display()">
+						<span class="name">Binary</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="radioin" id="dec_in" onclick="display()">
+						<span class="name">Decimal</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="radioin" id="hex_in" onclick="display()">
+						<span class="name">Hexadecimal</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="radioin" id="oct_in" onclick="display()">
+						<span class="name">Octal</span>
+					</label>
+				</div>
+
+				<div class="user-box">
+					<input type="text" name="" required="">
+					<label>Input</label>
+				</div>
+
+				<div class="radio-inputs">
+					<label class="radio">
+						<input type="radio" name="radioout" id="bin_out" onclick="display()">
+						<span class="name">Binary</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="radioout" id="dec_out" onclick="display()">
+						<span class="name">Decimal</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="radioout" id="hex_out" onclick="display()">
+						<span class="name">Hexadecimal</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="radioout" id="oct_out" onclick="display()">
+						<span class="name">Octal</span>
+					</label>
+				</div>
+
+
+				<div class="user-box">
+					<input type="text" name="" readonly >
+					<label>OUTPUT</label>
+				</div>
+
+				<center>
+					<a href="#">
+						<span></span>
+					</a>
+				</center>
+
+				<button class="shadow__btn" >
+					Convert
+				</button>
+
+			</form>
+
+   
+		</div>
+
+	</section>
+
+
+
+
+
+</body>
+
+</html>
