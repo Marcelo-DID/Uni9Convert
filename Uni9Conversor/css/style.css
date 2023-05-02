@@ -1,0 +1,279 @@
+
+/* <!-- **Creating  the Converter tool styling*
+
+ Program: Uni9convert  (style.css)
+  Gabriel Paixão R. Silva
+ date: 01/05/2023
+ version: 1.0 --> */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Anton', sans-serif;
+	color:#fff ;
+
+	
+}
+#disp{
+	 font-size:14px;
+	  font-weight:bold;
+}
+#intro{
+	background-color: transparent;
+	margin-top: 350px;
+
+}
+
+figure {
+	margin-top: 22%;
+height: 300px;
+
+}
+
+figure img {
+	transform: translateY(55%);
+	width: 100%;
+}
+
+
+
+aside {
+	font-size:69px; 
+	font-weight:bold;
+    width: 50%;
+    padding-left: 15px;
+    margin-left: 55px;
+    float: left; 
+	font-family: 'Roboto';
+  }
+
+
+header {
+	background-color: hsla(0, 0%, 0%, 0.61);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+
+}
+
+.center {
+	color: hsl(0, 0%, 100%);
+
+	padding: 0 2%;
+	display: flex;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-left: 0;
+}
+
+.logo img {
+	height: 100px;
+	width: 400px;
+}
+
+.menu-container {
+	justify-content: space-between;
+}
+
+.menu-container a {
+	color: hsl(0, 0%, 100%);
+	display: inline-block;
+	line-height: 100px;
+	margin: 0 10px;
+	padding: 8px 10px;
+	text-decoration: none;
+	transition: 0.1s;
+}
+
+
+
+.menu-container a.active-menu {
+	background-color: hsla(192, 100%, 41%, 0.925);
+}
+
+
+.menu-container a:hover {
+	color: hsla(251, 100%, 30%, 0.9);
+}
+
+
+
+
+#logo img {
+
+	height: 300px;
+	width: 300px;
+
+}
+
+
+
+/* Form para Converter */
+
+.login-box {
+
+	position: absolute;
+	top: 50%;
+	left: 80%;
+	width: 400px;
+	height: 600px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: rgba(24, 20, 20, 0.987);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+	border-radius: 10px;
+}
+
+.login-box .user-box {
+	position: relative;
+}
+
+.login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+
+.login-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+	top: -20px;
+	left: 0;
+	color: #bdb8b8;
+	font-size: 12px;
+}
+
+.login-box form a {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #ffffff;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 40px;
+	letter-spacing: 4px
+}
+
+
+.login-box a span {
+	position: absolute;
+	display: block;
+}
+
+@keyframes btn-anim1 {
+	0% {
+		left: -100%;
+	}
+
+	50%,
+	100% {
+		left: 100%;
+	}
+}
+
+.login-box a span:nth-child(1) {
+	bottom: 2px;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #4982ffee);
+	animation: btn-anim1 2s linear infinite;
+}
+
+/* Seletor */
+
+.radio-inputs {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 0.5rem;
+	background-color: #03b0f4;
+	box-sizing: border-box;
+	box-shadow: 0 0 2px #03b0f4,
+		0 0 15px #03b0f4,
+		0 0 35px #03b0f4,
+		0 0 70px #03b0f4;
+
+	padding: 0.25rem;
+	width: 300px;
+	font-size: 14px;
+}
+
+.radio-inputs .radio {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.radio-inputs .radio input {
+	display: none;
+}
+
+.radio-inputs .radio .name {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	border: none;
+	padding: .5rem 0;
+	color: #ffffff;
+	transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked+.name {
+	background-color: #005fec94;
+	font-weight: 600;
+}
+
+/*  Button  */
+
+.shadow__btn {
+	margin-left: 26%;
+	padding: 10px 20px;
+	border: none;
+	font-size: 17px;
+	color: #fff;
+	border-radius: 7px;
+	letter-spacing: 4px;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.5s;
+	transition-property: box-shadow;
+  }
+  
+  .shadow__btn {
+	background: #03b0f4;
+	box-shadow: 0 0 25px #03b0f4;
+  }
+  
+  .shadow__btn:hover {
+	box-shadow: 0 0 5px #03b0f4,
+				0 0 25px #03b0f4,
+				0 0 50px #03b0f4,
+				0 0 100px #03b0f4;
+  }
