@@ -9,11 +9,12 @@ const inputRes = document.querySelector('#result');
 const botaoConvert = document.querySelector('.converte');
 let mensagem = document.querySelector('[data-mensagem]');
 
-const clickBotaoHexa = clickBotao(botaoDecHexa, formDecHexa, formHexaDec);
+clickBotao(botaoDecHexa, formDecHexa, formHexaDec);
 
-const clickBotaoDec = clickBotao(botaoHexaDec, formHexaDec, formDecHexa);
+clickBotao(botaoHexaDec, formHexaDec, formDecHexa);
 
-const clickResult = botaoConvert.addEventListener('click', mostraResult);
+botaoConvert.addEventListener('click', mostraResult);
+
 
 
 function clickBotao(botao, formOn, formOff) {
@@ -88,6 +89,7 @@ function converteNumHex(inputUsuario, decimal, conversor) {
     res.reverse();//inverte a ordem do array;
     return res.toString().replace(/,/g, ''); //retorna o resultado transformando em string e retira as virgulas
 }
+
 
 function converteLetraHex(inputUsuario) {
     let iterador = [];

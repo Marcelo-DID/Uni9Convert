@@ -9,6 +9,10 @@ const inputRes = document.querySelector('#result');
 const botaoConvert = document.querySelector('.converte');
 let mensagem = document.querySelector('[data-mensagem]');
 
+inputBinHex.type = "text"
+console.log(inputBinHex);
+//inputBinHex.attributes.item()
+
 //Inicia o Array que irá compor os arrays
 let arrBin = [];
 let posicoesIniciais = {
