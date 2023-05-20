@@ -1,0 +1,26 @@
+@media screen and (min-width: 321) {
+    
+}
+
+@media screen and (min-width: 769) {
+    .tituloPrincipal {
+        position: relative;
+        font-size: 2rem;
+    }
+
+    .login-box {
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 1025) {
+    
+}
+
+@media screen and (min-width: 1291) {
+    
+}
+
+@media screen and (min-width: 1441) {
+    
+}
