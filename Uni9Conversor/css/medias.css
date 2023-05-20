@@ -1,8 +1,8 @@
-@media screen and (min-width: 321) {
+@media screen and (min-width: 321px) {
     
 }
 
-@media screen and (min-width: 769) {
+@media screen and (min-width: 768px) {
     .tituloPrincipal {
         position: relative;
         font-size: 2rem;
@@ -13,14 +13,14 @@
     }
 }
 
-@media screen and (min-width: 1025) {
+@media screen and (min-width: 1025px) {
     
 }
 
-@media screen and (min-width: 1291) {
+@media screen and (min-width: 1291px) {
     
 }
 
-@media screen and (min-width: 1441) {
+@media screen and (min-width: 1441px) {
     
 }
