@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/medias.css">
 	<link rel="shortcut icon" href="img\Png\favicon.ico" />
 	<script src="js/prensentation.js" defer></script>
+	<script src="./js/conversores.js" defer></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
 			<form>
 				<div class="radio-inputs">
 					<label class="radio">
-						<input type="radio" name="radioin" id="bin_in" onclick="display()">
+						<input class="bin_in" type="radio" name="radioin" id="bin_in" onclick="display()">
 						<span class="name">Binary</span>
 					</label>
 					<label class="radio">
@@ -67,8 +68,8 @@
 					</label>
 				</div>
 				<div class="user-box">
-					<input type="text" name="" required="">
-					<label>Input</label>
+					<input type="text" name="input" id="inputs" required>
+					<label for="inputs">INPUT</label>
 				</div>
 				<div class="radio-inputs">
 					<label class="radio">
@@ -92,8 +93,8 @@
 					</label>
 				</div>
 				<div class="user-box">
-					<input type="text" name="" readonly >
-					<label>OUTPUT</label>
+					<input type="text" class="resultado" name="result" id="result" readonly placeholder="OUTPUT">
+					<label for="result"></label>
 				</div>
 
 				<center>

@@ -1,3 +1,5 @@
+
+//Conexão IndexTest
 const botaoBinHexa = document.querySelector('.bin-hexa');
 const botaoHexaBin = document.querySelector('.hexa-bin');
 const form = document.querySelector('.form');
