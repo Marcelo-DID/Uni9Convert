@@ -29,12 +29,17 @@
 	margin-top: 100px;
 }
 
+.principal {
+	display: flex;
+	flex-direction: column;
+}
+
 .tituloPrincipal {
 	left: 10px;
-	position: fixed;
+	position: absolute;
 	width: 50%;
-	top: 40%;
-	font-size: 3rem;
+	top: 20%;
+	font-size: 2rem;
 	z-index: 1;
 	color: white;
 	
@@ -42,6 +47,7 @@
 
 .videos {
 	display: block;
+	background-color: black;
 	position: relative;
 	height: auto;
 	/* z-index: -1; */
@@ -60,7 +66,7 @@ aside {
 
 .home {
 	background-color: hsla(0, 0%, 0%, 0.61);
-	position: fixed;
+	position: absolute;
 	z-index: 1;
 	top: 0;
 	left: 0;
@@ -69,7 +75,10 @@ aside {
 
 .hero {
 	width: 100%;
+	padding-top: 6.5rem;
 	height: 100%;
+	background-color: black;
+	
 }
 
 .center {
@@ -84,8 +93,8 @@ aside {
 }
 
 .logo img {
-	height: 100px;
-	width: 400px;
+	height:  6rem;
+	width: 100%;
 }
 
 .menu-container {
@@ -95,7 +104,7 @@ aside {
 .menu-container a {
 	color: hsl(0, 0%, 100%);
 	display: inline-block;
-	line-height: 100px;
+	line-height: 90px;
 	margin: 0 10px;
 	padding: 8px 10px;
 	text-decoration: none;
@@ -126,15 +135,17 @@ aside {
 
 /* Form para Converter */
 
+.final {
+	background-color: black;
+}
+
 .login-box {
 
-	position: absolute;
-	top: 70%;
-	left: 80%;
-	width: 400px;
-	height: 600px;
-	padding: 40px;
-	transform: translate(-50%, -50%);
+	position: relative;
+	width: 90vw;
+	height: 80vh;
+	padding: 2rem;
+	margin: 1rem;
 	background: rgba(24, 20, 20, 0.987);
 	box-sizing: border-box;
 	box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
@@ -231,8 +242,8 @@ a span:nth-child(1) {
 		0 0 70px #03b0f4;
 
 	padding: 0.25rem;
-	width: 300px;
-	font-size: 14px;
+	width: 100%;
+	font-size: 0.8rem;
 	margin-bottom: 12px;
 }
 
@@ -265,7 +276,7 @@ a span:nth-child(1) {
 /*  Button  */
 
 .shadow__btn {
-	margin-left: 26%;
+	margin: 0rem 2rem;
 	padding: 10px 20px;
 	border: none;
 	font-size: 17px;

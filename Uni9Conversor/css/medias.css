@@ -3,11 +3,198 @@
 }
 
 @media screen and (min-width: 768px) {
+    .home {
+        position: fixed;
+    }
+
+    .hero {
+        padding-top: 0;
+    }
+
     .tituloPrincipal {
+        left: 10px;
+        position: fixed;
+        width: 50%;
+        top: 40%;
+        font-size: 3rem;
+        z-index: 1;
+        color: white;  
     }
 
     .login-box {
+
+        position: absolute;
+        top: 70%;
+        left: 80%;
+        width: 400px;
+        height: 600px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(24, 20, 20, 0.987);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 10px;
     }
+    
+    .user-box {
+        position: relative;
+    }
+    
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+    
+    .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+    
+    .user-box input:focus~label,
+    .user-box input:valid~label {
+        top: -20px;
+        left: 0;
+        color: #bdb8b8;
+        font-size: 12px;
+    }
+    
+    form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+    }
+    
+    
+    a span {
+        position: absolute;
+        display: block;
+    }
+    
+    @keyframes btn-anim1 {
+        0% {
+            left: -100%;
+        }
+    
+        50%,
+        100% {
+            left: 100%;
+        }
+    }
+    
+    a span:nth-child(1) {
+        bottom: 2px;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #4982ffee);
+        animation: btn-anim1 2s linear infinite;
+    }
+    
+    /* Seletor */
+    
+    .radio-inputs {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 0.5rem;
+        background-color: #03b0f4;
+        box-sizing: border-box;
+        box-shadow: 0 0 2px #03b0f4,
+            0 0 15px #03b0f4,
+            0 0 35px #03b0f4,
+            0 0 70px #03b0f4;
+    
+        padding: 0.25rem;
+        width: 300px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .radio-inputs .radio {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    
+    .radio-inputs .radio input {
+        display: none;
+    }
+    
+    .radio-inputs .radio .name {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        border: none;
+        padding: .5rem 0;
+        color: #ffffff;
+        transition: all .15s ease-in-out;
+    }
+    
+    .radio-inputs .radio input:checked+.name {
+        background-color: #005fec94;
+        font-weight: 600;
+    }
+    
+    /*  Button  */
+    
+    .shadow__btn {
+        margin-left: 26%;
+        padding: 10px 20px;
+        border: none;
+        font-size: 17px;
+        color: #fff;
+        border-radius: 7px;
+        letter-spacing: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.5s;
+        transition-property: box-shadow;
+    }
+      
+    .shadow__btn {
+    background: #03b0f4;
+    box-shadow: 0 0 25px #03b0f4;
+    }
+      
+    .shadow__btn:hover {
+    box-shadow: 0 0 5px #03b0f4,
+                0 0 25px #03b0f4,
+                0 0 50px #03b0f4,
+                0 0 100px #03b0f4;
+    }
+    
+    img {
+        width: 100%;
+        height: 15vh;
+    }
+    
+    footer {
+        background-color: black;
+    }
+    
+
 }
 
 @media screen and (min-width: 1025px) {
