@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/medias.css">
 	<link rel="shortcut icon" href="img\Png\favicon.ico" />
 	<script src="js/prensentation.js" defer></script>
+	<script src="./js/conversores.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 			</nav>
 		</div>
 	</header>
-	<main>
+	<main class="principal">
 		<div>
 			<h1 class="tituloPrincipal">The best place to convert your numbers!</h1>
 		</div>
@@ -44,70 +45,70 @@
 			</video>
 		</div>
 	
-	<section class="final">
-		<div class="login-box">
-			<form>
-				<div class="radio-inputs">
-					<label class="radio">
-						<input type="radio" name="radioin" id="bin_in" onclick="display()">
-						<span class="name">Binary</span>
-					</label>
-					<label class="radio">
-						<input type="radio" name="radioin" id="dec_in" onclick="display()">
-						<span class="name">Decimal</span>
-					</label>
+		<section class="final">
+			<div class="login-box">
+				<form>
+					<div class="radio-inputs">
+						<label class="radio">
+							<input class="bin_in" type="radio" name="radioin" id="bin_in" onclick="display()">
+							<span class="name">Binary</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="radioin" id="dec_in" onclick="display()">
+							<span class="name">Decimal</span>
+						</label>
 
-					<label class="radio">
-						<input type="radio" name="radioin" id="hex_in" onclick="display()">
-						<span class="name">Hexadecimal</span>
-					</label>
-					<label class="radio">
-						<input type="radio" name="radioin" id="oct_in" onclick="display()">
-						<span class="name">Octal</span>
-					</label>
-				</div>
-				<div class="user-box">
-					<input type="text" name="" required="">
-					<label>Input</label>
-				</div>
-				<div class="radio-inputs">
-					<label class="radio">
-						<input type="radio" name="radioout" id="bin_out" onclick="display()">
-						<span class="name">Binary</span>
-					</label>
+						<label class="radio">
+							<input type="radio" name="radioin" id="hex_in" onclick="display()">
+							<span class="name">Hexadecimal</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="radioin" id="oct_in" onclick="display()">
+							<span class="name">Octal</span>
+						</label>
+					</div>
+					<div class="user-box">
+						<input type="text" name="input" id="inputs" required>
+						<label for="inputs">INPUT</label>
+					</div>
+					<div class="radio-inputs">
+						<label class="radio">
+							<input type="radio" name="radioout" id="bin_out" onclick="display()">
+							<span class="name">Binary</span>
+						</label>
 
-					<label class="radio">
-						<input type="radio" name="radioout" id="dec_out" onclick="display()">
-						<span class="name">Decimal</span>
-					</label>
+						<label class="radio">
+							<input type="radio" name="radioout" id="dec_out" onclick="display()">
+							<span class="name">Decimal</span>
+						</label>
 
-					<label class="radio">
-						<input type="radio" name="radioout" id="hex_out" onclick="display()">
-						<span class="name">Hexadecimal</span>
-					</label>
+						<label class="radio">
+							<input type="radio" name="radioout" id="hex_out" onclick="display()">
+							<span class="name">Hexadecimal</span>
+						</label>
 
-					<label class="radio">
-						<input type="radio" name="radioout" id="oct_out" onclick="display()">
-						<span class="name">Octal</span>
-					</label>
-				</div>
-				<div class="user-box">
-					<input type="text" name="" readonly >
-					<label>OUTPUT</label>
-				</div>
+						<label class="radio">
+							<input type="radio" name="radioout" id="oct_out" onclick="display()">
+							<span class="name">Octal</span>
+						</label>
+					</div>
+					<div class="user-box">
+						<input type="text" class="resultado" name="result" id="result" readonly placeholder="OUTPUT">
+						<label for="result"></label>
+					</div>
 
-				<center>
-					<a href="#">
-						<span></span>
-					</a>
-				</center>
+					<center>
+						<a href="#">
+							<span></span>
+						</a>
+					</center>
 
-				<button class="shadow__btn" >
-					Convert
-				</button>
+					<button class="shadow__btn" >
+						Convert
+					</button>
 
-			</form>
-		</div>
+				</form>
+			</div>
 		</section>
 	</main>
 	<footer>
