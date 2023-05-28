@@ -3,7 +3,7 @@
         padding: 10px;
         position: absolute;
         width: 90%;
-        top: 25%;
+        top: 20%;
         font-size: 2.8rem;
         z-index: 1;
         color: white;
@@ -51,10 +51,10 @@
     .login-box {
 
         position: absolute;
-        top: 40%;
+        top: 55%;
         left: 75%;
         width: 20rem;
-        height: 20rem;
+        height: 25rem;
         padding: 40px;
         transform: translate(-50%, -50%);
         background: rgba(24, 20, 20, 0.987);
@@ -158,7 +158,7 @@
     .tituloPrincipal {
         position: fixed;
         width: 35%;
-        font-size: 4rem; 
+        font-size: 3.8rem; 
         top: 20%;
         
     }
@@ -167,7 +167,7 @@
         position: fixed;
         background-color: transparent;
         position: fixed;
-        top: 50%;
+        top: 55%;
         left: 10px;
         width: 35%;
         font-size: 1.2rem;
@@ -178,7 +178,7 @@
 
     .login-box {
         position: fixed;
-        top: 45%;
+        top: 55%;
         left: 70%;
         width: 30rem;
         height: 32rem;
