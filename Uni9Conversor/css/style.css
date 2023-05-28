@@ -37,7 +37,7 @@
 .tituloPrincipal {
 	left: 10px;
 	position: absolute;
-	width: 50%;
+	width: 80%;
 	top: 20%;
 	font-size: 2rem;
 	z-index: 1;
@@ -308,4 +308,14 @@ img {
 
 footer {
 	background-color: black;
+	padding-left: 12px;
+
+}
+
+
+.rodape{
+	display: none;
+}
+.rodapeAtivo{
+	height: 9vh;
 }
