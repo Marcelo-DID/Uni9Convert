@@ -166,7 +166,8 @@
     }
 
     .login-box {
-        top: 65%;
+        position: fixed;
+        top: 60%;
         left: 70%;
         width: 30rem;
         height: 35rem;
