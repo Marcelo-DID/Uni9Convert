@@ -8,6 +8,7 @@
         z-index: 1;
         color: white;
         
+
     }
 }
 
@@ -49,11 +50,11 @@
 
     .login-box {
 
-        position: absolute;
-        top: 58%;
+        position: fixed;
+        top: 40%;
         left: 75%;
         width: 20rem;
-        height: 25rem;
+        height: 20rem;
         padding: 40px;
         transform: translate(-50%, -50%);
         background: rgba(24, 20, 20, 0.987);
@@ -104,6 +105,13 @@
         padding: 0;
     }
     
+    .rodape{
+        display: inline;
+    }
+
+    .rodapeAtivo{
+        display: none;
+    }
 
 }
 
