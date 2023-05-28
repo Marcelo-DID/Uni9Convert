@@ -27,6 +27,10 @@
         color: white;  
     }
 
+    .hero {
+        height: 100%;
+    }
+
     aside {
         font-size:69px; 
         font-weight:bold;
@@ -51,7 +55,7 @@
     .login-box {
 
         position: absolute;
-        top: 55%;
+        top:55%;
         left: 75%;
         width: 20rem;
         height: 25rem;
@@ -117,23 +121,23 @@
 
 @media screen and (min-width: 1024px) {
     .tituloPrincipal {
-        width: 60%;
+        width: 50%;
         font-size: 4rem; 
     }
 
     #disp{
         background-color: transparent;
         position: absolute;
-        top: 55%;
+        top: 65%;
         left: 10px;
-        width: 58%;
+        width: 50%;
         font-size: 1rem;
         font-weight:bold;
         z-index: 1;
     }
 
     .login-box {
-        top: 50%;
+        top: 68%;
         left: 77%;
         width: 25rem;
         height: 32rem;
