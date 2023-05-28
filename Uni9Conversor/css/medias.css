@@ -196,5 +196,45 @@
 }
 
 @media screen and (min-width: 1441px) {
-    
+    .home {
+        position: fixed;
+    }
+    .tituloPrincipal {
+        position: fixed;
+        width: 35%;
+        font-size: 4rem; 
+        top: 20%;
+        
+    }
+
+    #disp{
+        position: fixed;
+        background-color: transparent;
+        position: fixed;
+        top: 50%;
+        left: 10px;
+        width: 35%;
+        font-size: 1.2rem;
+        font-weight:bold;
+        z-index: 1;
+      
+    }
+
+    .login-box {
+        position: fixed;
+        top: 55%;
+        left: 70%;
+        width: 30rem;
+        height: 32rem;
+    }
+
+    .radio-inputs {
+        width: 25rem;
+        font-size: 18px;
+    }
+
+    .shadow__btn {
+        margin: 0rem 4rem;
+        padding: 1rem 4rem;
+    }
 }
