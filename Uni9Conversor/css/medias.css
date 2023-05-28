@@ -1,5 +1,14 @@
 @media screen and (min-width: 321px) {
-    
+    .tituloPrincipal {
+        padding: 10px;
+        position: absolute;
+        width: 90%;
+        top: 25%;
+        font-size: 2.8rem;
+        z-index: 1;
+        color: white;
+        
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -198,6 +207,25 @@
 }
 
 @media screen and (min-width: 1025px) {
+    aside {
+        font-size:69px; 
+        font-weight:bold;
+        width: 50%;
+        padding-left: 15px;
+        margin-left: 55px;
+        float: left; 
+        font-family: 'Roboto';
+      }
+
+      #disp{
+        position: fixed;
+        top: 70%;
+        left: 10px;
+        width: 60%;
+        font-size:14px;
+        font-weight:bold;
+        z-index: 1;
+    }
     
 }
 
