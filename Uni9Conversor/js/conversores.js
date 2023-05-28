@@ -21,18 +21,24 @@ let posicoesIniciais = {
 convert.addEventListener("click", mostraResult)
 
 function mostraResult(resultado) {
+    event.preventDefault();
     if((decIn.checked && binOut.checked) || (decIn.checked && octOut.checked)) {
         outputRes.value = converteDecimalBinOct(resultado);
     } else if ((decIn.checked && hexOut.checked) || (hexIn.checked && decOut.checked)) {
         outputRes.value = converteDecimalHex(resultado);
     } else if ((binIn.checked && hexOut.checked) || (hexIn.checked && binOut.checked)){
         outputRes.value = convertBinHexa(resultado);
+    } else if (octIn.checked && binOut.checked) {
+        outputRes.value = octalBin(resultado);
+    } else if (octIn.checked && decOut.checked) {
+        outputRes.value = octalDecimal(resultado);
+    } else if (binIn.checked && decOut.checked) {
+        outputRes.value = binToDec(resultado)
     }
     return outputRes;
 }
 
 function converteDecimalBinOct(event, decimal, conversor) {
-    event.preventDefault();//Previne as funções padrões do botão.... Atualizar a página
     let res = '';
     let quo = '';
     if(decIn.checked && binOut.checked) {
@@ -60,7 +66,6 @@ function converteDecimalBinOct(event, decimal, conversor) {
 }
 
 function converteDecimalHex(event) {
-    event.preventDefault();//Previne as funções padrões do botão.... Atualizar a página
     if(decIn.checked && hexOut.checked){
         return converteNumHex(inputUsuario);
     } else if (hexIn.checked && decOut.checked) {
@@ -178,8 +183,7 @@ function converteLetraHex(inputUsuario) {
 }
 
 
-function convertBinHexa(event) {
-    event.preventDefault();//Previne as funções padrões do botão.... Atualizar a página
+function convertBinHexa() {
     if(binIn.checked && hexOut.checked){
         arrBin = [];
         return calculaBinHexa(arrBin, inputUsuario.value);
@@ -354,4 +358,89 @@ function calculaHexaBin(input) {
     //     }
     // }
     return resFinal.toString().replace(/,/g, '');
+}
+
+//HENRIQUE ------------------------------------------------------------------------------
+function octalBin(numoct)
+{
+    numoct = inputUsuario.value;
+    let i = 0;
+   
+    let binario = "";
+      
+    while (i<numoct.length) {
+          
+        let c=numoct[i];
+        switch (c) {
+        case '0':
+            binario += "000";
+            break;
+        case '1':
+            binario += "001";
+            break;
+        case '2':
+            binario += "010";
+            break;
+        case '3':
+            binario += "011";
+            break;
+        case '4':
+            binario += "100";
+            break;
+        case '5':
+            binario += "101";
+            break;
+        case '6':
+            binario += "110";
+            break;
+        case '7':
+            binario += "111";
+            break;
+        default:
+            document.write( "<br>Número Octal Inválido "+ numoct[i]);
+            break;
+        }
+        i++;
+    } 
+   
+    return binario;
+}
+
+function octalDecimal(numoct)
+{
+    event.preventDefault();
+    numoct = inputUsuario.value;
+    let num = numoct;
+    let dec_valor = 0;
+ 
+ 
+    let base = 1;
+ 
+    let conta = num;
+    while (conta) {
+ 
+      
+        let ultimo_digito = conta % 10;
+        conta = Math.floor(conta / 10);
+ 
+       
+        dec_valor += ultimo_digito * base;
+ 
+        base = base * 8;
+    }
+ 
+    return dec_valor;
+}
+
+//========================================================
+//Lucas
+//========================================================
+function binToDec() {
+    let bins = inputUsuario.value.split("").map(b => parseInt(b)).reverse();
+    let convers  = 0;
+    for (let i = 0; i < bins.length; i++) {
+        convers  += bins[i] << i;
+    }
+    
+    return convers;
 }
