@@ -20,25 +20,31 @@ let posicoesIniciais = {
 
 convert.addEventListener("click", mostraResult)
 
-function mostraResult(resultado) {
+function mostraResult() {
     event.preventDefault();
     if((decIn.checked && binOut.checked) || (decIn.checked && octOut.checked)) {
-        outputRes.value = converteDecimalBinOct(resultado);
+        outputRes.value = converteDecimalBinOct();
     } else if ((decIn.checked && hexOut.checked) || (hexIn.checked && decOut.checked)) {
-        outputRes.value = converteDecimalHex(resultado);
+        outputRes.value = converteDecimalHex();
     } else if ((binIn.checked && hexOut.checked) || (hexIn.checked && binOut.checked)){
-        outputRes.value = convertBinHexa(resultado);
+        outputRes.value = convertBinHexa();
     } else if (octIn.checked && binOut.checked) {
-        outputRes.value = octalBin(resultado);
+        outputRes.value = octalBin();
     } else if (octIn.checked && decOut.checked) {
-        outputRes.value = octalDecimal(resultado);
+        outputRes.value = octalDecimal();
     } else if (binIn.checked && decOut.checked) {
-        outputRes.value = binToDec(resultado)
+        outputRes.value = binToDec()
+    } else if (octIn.checked && hexOut.checked) {
+        outputRes.value = converteOctHex();
+    } else if (hexIn.checked && octOut.checked) {
+        outputRes.value = converteHexOct();
+    } else if (binIn.checked && octOut.checked) {
+        outputRes.value = binToOct();
     }
     return outputRes;
 }
 
-function converteDecimalBinOct(event, decimal, conversor) {
+function converteDecimalBinOct(decimal, conversor) {
     let res = '';
     let quo = '';
     if(decIn.checked && binOut.checked) {
@@ -50,17 +56,12 @@ function converteDecimalBinOct(event, decimal, conversor) {
     }
     //loop para retornar o valor em binario ou octal ... retornará o valor ao contrário.
     while((~~decimal/conversor) !== 0) {
-        console.log(`decimal = ${decimal}`);
         quo = ~~(decimal/conversor); //guarda o valor do quociente dentro da variavel quo, iniciada na linha 74
-        console.log(`quociente = ${quo}`);
         res += (decimal % conversor); //
-        console.log(`resultado = ${res}`);
         decimal = ~~(decimal/conversor); //decimal a ser divido pelo conversor no proximo loop do while... Obs.: sem essa linha o codigo se torna infinito!!
-        console.log(`decimal = ${decimal} - Finalizado nessa linha`);
     } 
     // ajustando o valor (invertendo a direção)
     res = res.split(""); //espalha o resultado
-    console.log(res);
     res.reverse();//inverte a ordem do array;
     return res.toString().replace(/,/g, ''); //retorna o resultado transformando em string e retira as virgulas
 }
@@ -79,9 +80,7 @@ function converteNumHex(inputUsuario) {
     conversor = 16;
     decimal = inputUsuario.value;
     while((~~decimal/conversor) !== 0) {
-        console.log(`decimal = ${decimal}`);
         quo = ~~(decimal/conversor); //guarda o valor do quociente dentro da variavel quo, iniciada na linha 74
-        console.log(`quociente = ${quo}`);
         switch(decimal % conversor) {
             case 10:
                 res += 'A';
@@ -103,14 +102,11 @@ function converteNumHex(inputUsuario) {
                 break;
             default:
                 res += (decimal % conversor);
-        }   
-        console.log(`resultado = ${res}`);
+        }
         decimal = ~~(decimal/conversor); //decimal a ser divido pelo conversor no proximo loop do while... Obs.: sem essa linha o codigo se torna infinito!!
-        console.log(`decimal = ${decimal} - Finalizado nessa linha`);
     } 
     // ajustando o valor (invertendo a direção)
     res = res.split(""); //espalha o resultado
-    console.log(res);
     res.reverse();//inverte a ordem do array;
     return res.toString().replace(/,/g, ''); //retorna o resultado transformando em string e retira as virgulas
 }
@@ -119,7 +115,6 @@ function converteLetraHex(inputUsuario) {
     let iterador = [];
     let res = 0;
     let resArray = inputUsuario.value.split("");
-    console.log(resArray);
     resArray.forEach((char) => {
         switch(char) {
             case 'A':
@@ -175,9 +170,7 @@ function converteLetraHex(inputUsuario) {
     iterador.reverse();
     for(let i = 0; i < iterador.length; i++) {
         iterador[i] = iterador[i] * (16 ** i);
-        console.log(iterador);
         res += iterador[i];
-        console.log(res);
     }
     return res;
 }
@@ -203,7 +196,6 @@ function converteStringNum(input, array) {
         }
         contador++;
     }
-    console.table(array)
     return array;
 }
 
@@ -284,16 +276,12 @@ function calculaBinHexa(array, input) {
         }
         
         acumulador = array[contador].reduce((acc, curr) => acc + curr);
-        //console.log(acumulador);
         res += converteNumLetra(acumulador);
         multiplier = 1;
         contador++; 
     }
-    console.log(res);
-    console.log(array);
     res = res.split("");
     res.reverse();
-    console.log(res);
     return res.toString().replace(/,/g, '');
 }
 
@@ -301,7 +289,6 @@ function validaNumero(num) {
     num = parseInt(num);
     if(!num && num != 0) {
        let erro = new Error("O caractere digitado não é um valor hexadecimal válido!");
-    //    limpaForms(inputBinHex, inputHexaBin, inputRes, mensagem);
        return erro;
     } 
     return num.toString();
@@ -309,33 +296,27 @@ function validaNumero(num) {
 
 function calculaHexaBin(input) {
     input = inputUsuario.value.split("");
-    console.log(input);
     let res = '';
     let resFinal = [];
     let conversorBin = 2;
     input.forEach((valor) => {
         switch(valor) {
             case '0':
-                console.log('entrou 2');
                 resFinal.push(posicoesIniciais[0]);
                 break;
             case '1':
-                console.log('entrou 2');
                 resFinal.push(posicoesIniciais[1]);
                 break;
             case '2':
-                console.log('entrou 2');
                 resFinal.push(posicoesIniciais[2]);
                 break;
             case '3':
-                console.log('entrou 2');
                 resFinal.push(posicoesIniciais[3]);
                 break;
             default:
                 valor = converteLetraNum(valor);
                 while((~~valor / conversorBin) != 0) {
                     res += (valor % conversorBin);
-                    console.log((valor % conversorBin));
                     valor = ~~(valor/conversorBin);
                 }
                 if(res.length < 4 && res.length != 0) {
@@ -343,20 +324,11 @@ function calculaHexaBin(input) {
                 }
                 res = res.split("").reverse();
                 while(res != 0) {
-                    console.log(res);
                     resFinal.push(res.splice(0, 4));
                 }  
                 break;
         }
     })
-    console.log(resFinal[0][0]);
-   
-    // while(resFinal[0][0] == '0'){
-    //     if(resFinal[0][0] == '0') {
-    //         resFinal[0].shift();
-    //         console.log(resFinal);
-    //     }
-    // }
     return resFinal.toString().replace(/,/g, '');
 }
 
@@ -408,7 +380,6 @@ function octalBin(numoct)
 
 function octalDecimal(numoct)
 {
-    event.preventDefault();
     numoct = inputUsuario.value;
     let num = numoct;
     let dec_valor = 0;
@@ -443,4 +414,159 @@ function binToDec() {
     }
     
     return convers;
+}
+
+
+function converteOctHex() {
+    let input = inputUsuario.value;
+    let res = octalBin(input);
+    let resBin = Array.from(res)
+    let resBinToHex = [];
+    let multiplier = 8;
+    let contador = 0;
+    let result = "";
+    let acumulador = "";
+    while (resBin.length != 0) {
+        while((resBin.length % 4) != 0) {
+            resBin.unshift("0") 
+        }
+        resBinToHex.push(resBin.splice(0, 4))
+    }
+    let validaArrayZero = resBinToHex[0].reduce((acc, curr) => {
+        return acc + curr;
+    }, 0);
+    if(validaArrayZero != 0) {
+        contador = 0;
+    } else {
+        contador = 1;
+    }
+
+    while(contador < resBinToHex.length) {
+        //console.log(contador);
+        for(let i = 0; i < resBinToHex[contador].length; i++) {
+            if(resBinToHex[contador][i] == 1 || resBinToHex[contador][i] == 0){
+                resBinToHex[contador][i] = resBinToHex[contador][i] * multiplier;
+                multiplier = multiplier / 2;
+            } else {
+                // mensagem.innerHTML = "Insira um valor Binário Válido!";
+                // setTimeout(() => {
+                //     limpaForms(inputUsuario, inputHexaBin, inputRes, mensagem)
+                // }, 5000);
+                outputRes.value = "";
+                throw Error = new Error("Erro, Input deve ser um número Binário válido, 0 ou 1");
+            }
+            
+        }
+        
+        acumulador = resBinToHex[contador].reduce((acc, curr) => acc + curr);
+        result += converteNumLetra(acumulador);
+        multiplier = 8;
+        contador++; 
+    }
+    return result.toString().replace(/,/g, '');
+}
+
+function converteHexOct() {
+    let input = inputUsuario.value;
+    let res = calculaHexaBin(input)
+    let resBin = Array.from(res)
+    let resBinToOct = [];
+    let multiplier = 4;
+    let contador = 0;
+    let result = "";
+    let acumulador = "";
+    while (resBin.length != 0) {
+        while((resBin.length % 3) != 0) {
+            resBin.unshift("0") 
+        }
+        resBinToOct.push(resBin.splice(0, 3))
+    }
+
+    let validaArrayZero = resBinToOct[0].reduce((acc, curr) => {
+        return acc + curr;
+    }, 0);
+    if(validaArrayZero != 0) {
+        contador = 0;
+    } else {
+        contador = 1;
+    }
+    
+    while(contador < resBinToOct.length) {
+        //console.log(contador);
+        for(let i = 0; i < resBinToOct[contador].length; i++) {
+            if(resBinToOct[contador][i] == 1 || resBinToOct[contador][i] == 0){
+                resBinToOct[contador][i] = resBinToOct[contador][i] * multiplier;
+                multiplier = multiplier / 2;
+            } else {
+                // mensagem.innerHTML = "Insira um valor Binário Válido!";
+                // setTimeout(() => {
+                //     limpaForms(inputUsuario, inputHexaBin, inputRes, mensagem)
+                // }, 5000);
+                outputRes.value = "";
+                throw Error = new Error("Erro, Input deve ser um número Binário válido, 0 ou 1");
+            }
+            
+        }
+        
+        acumulador = resBinToOct[contador].reduce((acc, curr) => acc + curr);
+        //console.log(acumulador);
+        result += converteLetraNum(acumulador);
+        multiplier = 4;
+        contador++; 
+    }
+    return result.toString().replace(/,/g, '');
+}
+
+function binToOct() {
+    let input = inputUsuario.value;
+    let resBinStr = Array.from(input)
+    resBin = resBinStr.map(str => {
+        return parseInt(str);
+    })
+    let resBinToOct = [];
+    let multiplier = 4;
+    let contador = 0;
+    let result = "";
+    let acumulador = "";
+    while (resBin.length != 0) {
+        while((resBin.length % 3) != 0) {
+            resBin.unshift(0) 
+        }
+        resBinToOct.push(resBin.splice(0, 3))
+        
+    }
+
+    let validaArrayZero = resBinToOct[0].reduce((acc, curr) => {
+        return acc + curr;
+    }, 0);
+    if(validaArrayZero != 0) {
+        contador = 0;
+    } else {
+        contador = 1;
+    }
+    
+    while(contador < resBinToOct.length) {
+        //console.log(contador);
+        for(let i = 0; i < resBinToOct[contador].length; i++) {
+            if(resBinToOct[contador][i] == 1 || resBinToOct[contador][i] == 0){
+                resBinToOct[contador][i] = resBinToOct[contador][i] * multiplier;
+                multiplier = multiplier / 2;
+            } else {
+                // mensagem.innerHTML = "Insira um valor Binário Válido!";
+                // setTimeout(() => {
+                //     limpaForms(inputUsuario, inputHexaBin, inputRes, mensagem)
+                // }, 5000);
+                outputRes.value = "";
+                throw Error = new Error("Erro, Input deve ser um número Binário válido, 0 ou 1");
+            }
+            
+        }
+        
+        acumulador = resBinToOct[contador].reduce((acc, curr) => acc + curr);
+        //console.log(acumulador);
+        result += converteLetraNum(acumulador);
+        multiplier = 4;
+        contador++; 
+    }
+    return result.toString().replace(/,/g, '');
 }
