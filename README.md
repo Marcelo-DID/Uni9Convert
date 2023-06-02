@@ -1,5 +1,4 @@
 # Projeto do 2º Semestre do curso de Tecnologia em Análise e Desenvolvimento de Sistemas!
-# ---------------------------------------------------------------------------------------
 # Uni9Convert - The Best Place to Convert Your Numbers!
 
 > Status do Projeto:
