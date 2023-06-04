@@ -2,7 +2,6 @@
 # Uni9Convert - The Best Place to Convert Your Numbers!
 
 > + https://uni9-convert.vercel.app/
-
 > Status do Projeto:
 > + Finalizando! ⏯️
 ## Integrantes
