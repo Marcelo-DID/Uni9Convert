@@ -2,7 +2,7 @@
 # Uni9Convert - The Best Place to Convert Your Numbers!
 
 > + https://uni9-convert.vercel.app/
-> ## Status do Projeto:
+> <h3> Status do Projeto:</h3>
 > + Finalizando! ⏯️
 ## Integrantes
 - André Passero Olímpio de Souza - RA: 3022201601
