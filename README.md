@@ -3,7 +3,7 @@
 
 > + https://uni9-convert.vercel.app/
 > <h3> Status do Projeto:</h3>
-> + Finalizando! ⏯️
+> - Finalizando! ⏯️
 ## Integrantes
 - André Passero Olímpio de Souza - RA: 3022201601
 - Gabriel Miguel Dias - RA: 3022200368
