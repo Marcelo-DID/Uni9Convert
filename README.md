@@ -1,6 +1,9 @@
 # Projeto do 2º Semestre do curso de Tecnologia em Análise e Desenvolvimento de Sistemas!
-> Status do Projeto:
-> + Em Andamento ⏯️
+# Uni9Convert - The Best Place to Convert Your Numbers!
+
+> + https://uni9-convert.vercel.app/
+> <h3> Status do Projeto:</h3>
+> - Finalizando! ⏯️
 ## Integrantes
 - André Passero Olímpio de Souza - RA: 3022201601
 - Gabriel Miguel Dias - RA: 3022200368
@@ -17,18 +20,7 @@
 ## Objetivo
 - O objetivo deste projeto, é a construção de um serviço WEB.
 
-## Tópicos à definir!
+## Descrição do serviço prestado:
 
-> + Tipo do serviço oferecido **(objetivo)**
-> + Banco de dados Escolhido
-> + Divisão de tarefas
-> + Tempo de revisão em call
-> + Frameworks
-
-## Já Definidos!
-
-> + Linguagens: **JavaScript, HTML, CSS, NodeJS**
-
-## Acréscimo:
-
-> + Pré-treinamento em Versionamento **(Irá precisar de um voluntário)**.
+> + Uni9Convert, o melhor lugar para converter seus números!
+> O Objetivo deste site é prestar o serviço de conversão númerica entre os tipos: Binários, Octais, Decimais e Hexadecimais!
