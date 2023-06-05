@@ -227,18 +227,50 @@
     .login-box {
         position: fixed;
         top: 47%;
-        left: 80%;
-        width: 30rem;
+        left: 70%; /*70%*/
+        width: 35rem;
         height: 32rem;
     }
 
     .radio-inputs {
-        width: 25rem;
-        font-size: 18px;
+        width: 30rem;
+        font-size: 23px;
+    }
+
+    .user-box label{
+        padding: 20px 0;
+        font-size: 28px;
+    }
+
+    .login-box .user-box input{
+        padding: 20px 0;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+
+    .user-box input:focus~label,
+    .user-box input:valid~label{
+    font-size: 17px;
+    }
+
+
+    .menu-container a{
+    font-size: 1.5rem;
+
     }
 
     .shadow__btn {
-        margin: 0rem 4rem;
+        margin: 0rem 7rem;
         padding: 1rem 4rem;
+    }
+
+    img {
+        width: 100%;
+        height: 20vh;
+    }
+
+    #result{
+        width: 30rem;
+        font-size: 2rem;
     }
 }
