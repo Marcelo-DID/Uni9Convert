@@ -1,10 +1,11 @@
-# Projeto do 2º Semestre do curso de Tecnologia em Análise e Desenvolvimento de Sistemas!
+# Projeto do 2º Semestre do curso de Tecnólogo em Análise e Desenvolvimento de Sistemas!💻
 # Uni9Convert - The Best Place to Convert Your Numbers!
 
 > + https://uni9-convert.vercel.app/
 > <h3> Status do Projeto:</h3>
 > - Finalizando! ⏯️
 ## Integrantes
+
 - André Passero Olímpio de Souza - RA: 3022201601
 - Gabriel Miguel Dias - RA: 3022200368
 - Gabriel Paixão Rodrigues da Silva - RA:3022201075
